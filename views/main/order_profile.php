@@ -26,7 +26,7 @@ if ($model->status == "Не обработан") {
 ?>
 <div class="<?= $class ?>">
     <div class="profile_goods_image">
-        <?
+        <?php
         $image = $goods->getImage($model->goods_id);
         ?>
         <img src="<?= $image->getUrl('75x75'); ?>" alt="">
