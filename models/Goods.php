@@ -59,6 +59,7 @@ class Goods extends \yii\db\ActiveRecord
             [['small_description'], 'string', 'max' => 512],
             [['description'], 'string', 'max' => 4096],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
+            [['manufactory_id'], 'exist', 'skipOnError' => true, 'targetClass' => Manufactory::className(), 'targetAttribute' => ['manufactory_id' => 'id']],
         ];
     }
 
