@@ -8,15 +8,10 @@
 
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
-use app\models\Category;
-use app\models\Manufactory;
 
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Goods */
-
-$category = Category::findOne(['id' => $model->category_id]);
-$manufactory = Manufactory::findOne(['id' => $model->manufactory_id]);
 
 ?>
 <div class="goods_block">
@@ -49,8 +44,8 @@ $manufactory = Manufactory::findOne(['id' => $model->manufactory_id]);
     Modal::begin([
         'header' => '<h3 class="goods_name">'.$model->name.'</h3>
         <div class="goods_modal_header_text">
-            <p><span class="goods_characteristic">Категория: </span>'.$category->title.'</p> 
-            <p><span class="goods_characteristic">Производитель: </span>'.$manufactory->title.'</p>
+            <p><span class="goods_characteristic">Категория: </span>'.$model->category->title.'</p> 
+            <p><span class="goods_characteristic">Производитель: </span>'.$model->manufactory->title.'</p>
         </div>
         ',
         'id' => $model->id,

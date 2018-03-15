@@ -25,6 +25,7 @@ use Yii;
  * @property string $image
  *
  * @property Category $category
+ * @property Manufactory $manufactory
  */
 class Goods extends \yii\db\ActiveRecord
 {
