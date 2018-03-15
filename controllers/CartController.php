@@ -33,8 +33,8 @@ class CartController extends BehaviorController
             return $this->redirect(Yii::$app->request->referrer);
         }
 
-        $this->layout = false;
-        return $this->render('cart_view', compact('session'));
+//        $this->layout = false;
+        return $this->renderAjax('cart_view', compact('session'));
     }
 
     public function actionClear()
