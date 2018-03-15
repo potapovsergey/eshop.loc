@@ -38,6 +38,15 @@ class Goods extends \yii\db\ActiveRecord
         return 'goods';
     }
 
+    public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
+    }
+
     /**
      * @inheritdoc
      */
