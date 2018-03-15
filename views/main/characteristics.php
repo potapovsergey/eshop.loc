@@ -13,7 +13,6 @@ use app\models\Characteristics;
 $characteristics = Characteristics::findOne(['id' => $model->characteristics_id]);
 
 ?>
-<!--<b>--><?//= $characteristics->title ?><!--: </b>--><?//= $model->values ?>
 
 <tr>
     <td class="characteristics_info"><?= $characteristics->title ?>:</td>
