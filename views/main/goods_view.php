@@ -45,7 +45,7 @@ use yii\bootstrap\Modal;
         'header' => '<h3 class="goods_name">'.$model->name.'</h3>
         <div class="goods_modal_header_text">
             <p><span class="goods_characteristic">Категория: </span>'.$model->category->title.'</p> 
-            <p><span class="goods_characteristic">Производитель: </span>'.$model->manufactory->title.'</p>
+            <p><span class="goods_characteristic">Производитель: </span>'.$model->manufactory['title'].'</p>
         </div>
         ',
         'id' => $model->id,
