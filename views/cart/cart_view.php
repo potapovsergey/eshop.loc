@@ -30,7 +30,6 @@ $this->registerJsFile('@web/js/cart.js');
                     <td><?= $item['name'] ?></td>
                     <td><?= $item['count'] ?></td>
                     <td><?= $item['price'] ?></td>
-<!--                    <td><a href="--><?//= Url::to(['/card/delete', 'id' => $id]) ?><!--" class="delete-item" data-id="--><?//= $id ?><!--"><span class="glyphicon glyphicon-remove text-danger"></span></a></td>-->
                     <?php Pjax::begin(); ?>
                     <td><?= Html::a('<span class="glyphicon glyphicon-remove text-danger"></span>', ['/cart/delete', 'id' => $id]); ?></td>
                     <?php Pjax::end(); ?>
