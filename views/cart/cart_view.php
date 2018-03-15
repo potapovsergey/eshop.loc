@@ -13,7 +13,7 @@ use yii\widgets\Pjax;
 
 $this->registerJsFile('@web/js/cart.js');
 ?>
-<? if (!empty($session['cart'])): ?>
+<?php if (!empty($session['cart'])): ?>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>
@@ -25,7 +25,7 @@ $this->registerJsFile('@web/js/cart.js');
             </tr>
             </thead>
             <tbody>
-            <? foreach ($session['cart'] as $id => $item): ?>
+            <?php foreach ($session['cart'] as $id => $item): ?>
                 <tr>
                     <td><?= $item['name'] ?></td>
                     <td><?= $item['count'] ?></td>
@@ -35,7 +35,7 @@ $this->registerJsFile('@web/js/cart.js');
                     <td><?= Html::a('<span class="glyphicon glyphicon-remove text-danger"></span>', ['/cart/delete', 'id' => $id]); ?></td>
                     <?php Pjax::end(); ?>
                 </tr>
-            <? endforeach; ?>
+            <?php endforeach; ?>
             <tr>
                 <td colspan="3">Итого: </td>
                 <td><?= $session['cart.count'] ?></td>
@@ -47,6 +47,6 @@ $this->registerJsFile('@web/js/cart.js');
             </tbody>
         </table>
     </div>
-<? else: ?>
+<?php else: ?>
     <h3>В Корзине пусто</h3>
-<? endif; ?>
+<?php endif; ?>
