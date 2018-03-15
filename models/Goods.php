@@ -10,9 +10,7 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property integer $category_id
- * @property integer $manufactory_id
  * @property string $tags
- * @property string $small_description
  * @property string $description
  * @property double $price
  * @property double $rating
@@ -20,12 +18,15 @@ use Yii;
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
- * @property integer $min_price
- * @property integer $max_price
  * @property string $image
+ * @property integer $manufactory_id
+ * @property string $small_description
  *
  * @property Category $category
  * @property Manufactory $manufactory
+ * @property OrderGoods[] $orderGoods
+ * @property ProfileOrder[] $profileOrders
+ * @property ValuesCharacteristics[] $valuesCharacteristics
  */
 class Goods extends \yii\db\ActiveRecord
 {
@@ -37,27 +38,18 @@ class Goods extends \yii\db\ActiveRecord
         return 'goods';
     }
 
-    public function behaviors()
-    {
-        return [
-            'image' => [
-                'class' => 'rico\yii2images\behaviors\ImageBehave',
-            ]
-        ];
-    }
-
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['name', 'category_id', 'manufactory_id', 'tags', 'small_description', 'description', 'price', 'quantity'], 'required'],
-            [['category_id', 'quantity', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['name', 'category_id', 'tags', 'description', 'price', 'rating', 'quantity', 'created_at', 'updated_at', 'small_description'], 'required'],
+            [['category_id', 'quantity', 'status', 'created_at', 'updated_at', 'manufactory_id'], 'integer'],
             [['price', 'rating'], 'number'],
             [['name', 'tags', 'image'], 'string', 'max' => 255],
-            [['small_description'], 'string', 'max' => 512],
             [['description'], 'string', 'max' => 4096],
+            [['small_description'], 'string', 'max' => 512],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
             [['manufactory_id'], 'exist', 'skipOnError' => true, 'targetClass' => Manufactory::className(), 'targetAttribute' => ['manufactory_id' => 'id']],
         ];
@@ -70,18 +62,19 @@ class Goods extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Название',
+            'name' => 'Name',
             'category_id' => 'Category ID',
-            'tags' => 'Теги',
-            'small_description' => 'Общее описание',
-            'description' => 'Описание',
-            'price' => 'Цена',
-            'rating' => 'Рейтинг',
-            'quantity' => 'Кол-во',
-            'status' => 'Статус',
+            'tags' => 'Tags',
+            'description' => 'Description',
+            'price' => 'Price',
+            'rating' => 'Rating',
+            'quantity' => 'Quantity',
+            'status' => 'Status',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
-            'manufactory_id' => 'Производители'
+            'image' => 'Image',
+            'manufactory_id' => 'Manufactory ID',
+            'small_description' => 'Small Description',
         ];
     }
 
@@ -92,11 +85,34 @@ class Goods extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getManufactory()
     {
         return $this->hasOne(Manufactory::className(), ['id' => 'manufactory_id']);
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getOrderGoods()
+    {
+        return $this->hasMany(OrderGoods::className(), ['goods_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProfileOrders()
+    {
+        return $this->hasMany(ProfileOrder::className(), ['goods_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getValuesCharacteristics()
     {
         return $this->hasMany(ValuesCharacteristics::className(), ['goods_id' => 'id']);
