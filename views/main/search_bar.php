@@ -45,28 +45,6 @@ use app\models\Manufactory;
     <?php echo 'до'?>
     <?php echo   $form->field($model, 'max_price')?>
 
-<!--    --><?//= $form->field($model, 'id') ?>
-<!---->
-<!--    --><?//= $form->field($model, 'name') ?>
-<!---->
-<!--    --><?//= $form->field($model, 'category_id') ?>
-<!---->
-<!--    --><?//= $form->field($model, 'tags') ?>
-<!---->
-<!--    --><?//= $form->field($model, 'description') ?>
-
-    <?php // echo $form->field($model, 'price') ?>
-
-    <?php // echo $form->field($model, 'rating') ?>
-
-    <?php // echo $form->field($model, 'quantity') ?>
-
-    <?php // echo $form->field($model, 'status') ?>
-
-    <?php // echo $form->field($model, 'created_at') ?>
-
-    <?php // echo $form->field($model, 'updated_at') ?>
-
     <div class="form-group">
         <?= Html::submitButton('Фильтровать', ['class' => 'btn btn-primary']) ?>
     </div>
