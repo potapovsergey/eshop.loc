@@ -25,7 +25,7 @@ $manufactory = Manufactory::findOne(['id' => $model->manufactory_id]);
     </div>
     <div class="goods_body">
         <div class="goods_image">
-            <?
+            <?php
             $image = $model->getImage($model->id);
             ?>
             <img src="<?= $image->getUrl('175x175'); ?>" alt="">
