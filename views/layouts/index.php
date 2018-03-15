@@ -141,7 +141,7 @@ $this->beginPage();
             '<span class="glyphicon glyphicon-search"></span>',
             [
                 'class' => 'btn btn-info',
-                'onClick' => 'window.location.href = this.form.action + "-" + this.form.search.value.replace(/[^\w\а-яё\А-ЯЁ]+/g, "_");'
+//                'onClick' => 'window.location.href = this.form.action + "-" + this.form.search.value.replace(/[^\w\а-яё\А-ЯЁ]+/g, "_");'
             ]
         );
         echo '</span></div>';
