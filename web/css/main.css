@@ -1,0 +1,9 @@
+.login_modal {
+    width: 500px;
+}
+
+.search_text{
+    display: inline-block;
+    margin: 0 5px;
+    margin-top: 6px;
+}

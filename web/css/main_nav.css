@@ -1,0 +1,48 @@
+#main_nav.navbar-default .navbar-brand {
+    color: rgba(34, 49, 63, 1);
+    font-size: 26px;
+    font-family: Impact, fantasy;
+}
+#main_nav.navbar-default {
+    font-size: 18px;
+    background-color: rgba(41, 128, 185, 1);
+    background: -webkit-linear-gradient(top, rgba(52, 152, 219, 1) 0%, rgba(41, 128, 185, 1) 100%);
+    background: linear-gradient(to bottom, rgba(52, 152, 219, 1) 0%, rgba(41, 128, 185, 1) 100%);
+    border-width: 0px;
+    border-radius: 0px;
+}
+#main_nav.navbar-default .navbar-nav>li>a {
+    color: rgba(34, 49, 63, 1);
+    background-color: rgba(41, 128, 185, 1);
+    background: -webkit-linear-gradient(top, rgba(52, 152, 219, 1) 0%, rgba(41, 128, 185, 1) 100%);
+    background: linear-gradient(to bottom, rgba(52, 152, 219, 1) 0%, rgba(41, 128, 185, 1) 100%);
+}
+#main_nav.navbar-default .navbar-nav>li>a:hover,
+#main_nav.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(34, 49, 63, 1);
+    background-color: rgba(65, 131, 215, 1);
+    background: -webkit-linear-gradient(top, rgba(89, 171, 227, 1) 0%, rgba(65, 131, 215, 1) 100%);
+    background: linear-gradient(to bottom, rgba(89, 171, 227, 1) 0%, rgba(65, 131, 215, 1) 100%);
+}
+#main_nav.navbar-default .navbar-nav>.active>a,
+#main_nav.navbar-default .navbar-nav>.active>a:hover,
+#main_nav.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(34, 49, 63, 1);
+    background-color: rgba(65, 131, 215, 1);
+    background: -webkit-linear-gradient(top, rgba(89, 171, 227, 1) 0%, rgba(65, 131, 215, 1) 100%);
+    background: linear-gradient(to bottom, rgba(89, 171, 227, 1) 0%, rgba(65, 131, 215, 1) 100%);
+}
+#main_nav.navbar-default .navbar-toggle {
+    border-color: #4183d7;
+}
+#main_nav.navbar-default .navbar-toggle:hover,
+#main_nav.navbar-default .navbar-toggle:focus {
+    background-color: #4183d7;
+}
+#main_nav.navbar-default .navbar-toggle .icon-bar {
+    background-color: #4183d7;
+}
+#main_nav.navbar-default .navbar-toggle:hover .icon-bar,
+#main_nav.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #2980b9;
+}

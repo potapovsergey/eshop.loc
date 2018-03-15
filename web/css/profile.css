@@ -1,0 +1,121 @@
+.profile_block{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto 0;
+    background-color: inherit;
+    /*border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    /*box-shadow: 0 0 20px 3px rgba(0, 0, 0, .7);*/
+}
+
+.profile_avatar{
+    width: 200px;
+    height: 200px;
+    margin: 0 50px 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .7);
+}
+
+.profile_body{
+    margin: 0 20px 20px;
+    border-top: 1px solid #a6a6a6;
+    word-wrap: normal;
+}
+
+.profile_footer{
+    max-width: 800px;
+    height: 50px;
+    margin: 0 50px 0;
+    border-top: 1px solid #a6a6a6;
+}
+
+.profile_button{
+    margin: 10px 90px 0;
+}
+
+.profile_data{
+    margin: 0 50px 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .7);
+}
+
+.profile_data_head{
+    margin: 0 45px 30px;
+    padding-top: 20px;
+}
+
+.profile_name{
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    font-family: Consolas, fantasy;
+
+}
+
+.profile_FSM{
+    font-size: 14px;
+    text-shadow: none;
+    font-family: Consolas, Arial, fantasy;
+}
+
+.profile_info{
+    font-size: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+    font-weight: 400;
+    color: #5e5e5e;
+}
+
+.profile_data_text{
+    font-size: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+    font-weight: 400;
+    color: #0b3e6f;
+}
+
+.profile_table{
+    border: 4px;
+    border-collapse: separate;
+    border-spacing: 7px 11px;
+    width: 200px;
+}
+
+.profile_order_view {
+    width: 1000px;
+    margin: 0 100px 0;
+}
+
+.main-order-profile {
+    position: static;
+    float: left;
+    width: 300px;
+    margin: 10px 10px 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .7);
+}
+
+.not-processed {
+    background-color: #e74c3c;
+}
+
+.processed {
+    background-color: #f1c40f;
+}
+
+.process {
+    background-color: #2ecc71;
+}
+
+.profile_order_info {
+    width: 100px;
+    margin: -175px 90px 0;
+}
+
+.profile_h {
+    text-align: center;
+    border-bottom: dashed darkgray 1px;
+}
+
+.profile_goods_image {
+    position: static;
+    margin: 10px 10px 0;
+    width: 175px;
+    height: 175px;
+}
