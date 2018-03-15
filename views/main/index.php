@@ -23,9 +23,9 @@ use yii\widgets\Pjax;
         'dataProvider' => $dataProvider,
         'summary' => '',
         'itemOptions' => ['class' => 'item'],
-        'itemView' => function ($model) {
+        'itemView' => function ($searchModel) {
             return $this->render('goods_view',[
-                'model' => $model
+                'model' => $searchModel
             ]);
         },
     ]) ?> <?php Pjax::end(); ?>
