@@ -35,7 +35,7 @@ $this->beginPage();
     <?php $this->head() ?>
 </head>
 <body>
-<? $this->beginBody(); ?>
+<?php $this->beginBody(); ?>
     <div class="wrap">
         <?php
         NavBar::begin([
@@ -160,7 +160,7 @@ $this->beginPage();
             <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>
-<? $this->endBody(); ?>
+<?php $this->endBody(); ?>
 </body>
 </html>
-<? $this->endPage(); ?>
+<?php $this->endPage(); ?>
